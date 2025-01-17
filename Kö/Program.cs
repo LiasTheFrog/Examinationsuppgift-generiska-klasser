@@ -75,7 +75,7 @@ minKo2.Add(1);
 minKo2.Add(2);
 minKo2.Add(3);
 
-minKo1.Compare(minKo2);
+   Console.WriteLine(minKo1.Compare(minKo2)); 
 
     }
 }
