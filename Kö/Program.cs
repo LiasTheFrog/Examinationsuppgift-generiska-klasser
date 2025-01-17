@@ -56,11 +56,15 @@ items = new T[size];
 
 public class LengthException : Exception{
     string message = "kön är full";
+    public override string ToString()
+    {
+        return message;
+    }
 }
 
 
 class Program{
-    public static void main(){
+    public static void Main(){
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
