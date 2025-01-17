@@ -64,13 +64,14 @@ class Program{
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
-
-minKo1.Compare(minKo2);
 minKo1.Add(1);
 minKo1.Add(2);
 minKo1.Add(3);
 minKo2.Add(1);
 minKo2.Add(2);
 minKo2.Add(3);
+
+minKo1.Compare(minKo2);
+
     }
 }
