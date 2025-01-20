@@ -1,6 +1,7 @@
 ﻿
 using System.ComponentModel;
 using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 
 public class Ko <T> where T : IComparable<T>{
     //variabler
@@ -83,6 +84,7 @@ bool active = true;
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
 while(active){
+Console.Clear();
 
 Console.WriteLine("(1) add");
 Console.WriteLine("(2) remove");
@@ -118,7 +120,8 @@ Console.ReadKey();
 break;
 
 case 3:
-Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2)); 
+Console.Write("0 = lika, !0 = olika: ");
+Console.WriteLine(minKo1.Compare(minKo2)); 
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
 break;
