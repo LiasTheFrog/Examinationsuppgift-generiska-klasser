@@ -86,15 +86,15 @@ Console.WriteLine("(1) add");
 Console.WriteLine("(2) remove");
 Console.WriteLine("(3) compare");
 Console.WriteLine("(4) print");
-Console.WriteLine("(5)");
-Console.WriteLine("(6)");
+Console.WriteLine("(5) swap");
+Console.WriteLine("(6) ");
 
 Alt = int.Parse(Console.ReadLine());
 
 switch(Alt){
 
 case 1:
-Console.WriteLine("väljk kö: ");
+Console.WriteLine("välj kö: ");
 chooseKo = int.Parse(Console.ReadLine());
 if(chooseKo == 1){
     Console.WriteLine("ange nummret du vill lägga till: ");
@@ -117,7 +117,7 @@ Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2));
 break;
 
 case 4:
-Console.WriteLine("välj vilken kö: ");
+Console.WriteLine("välj kö: ");
 chooseKo = int.Parse(Console.ReadLine());
 if(chooseKo == 1){
 minKo1.print(1);
