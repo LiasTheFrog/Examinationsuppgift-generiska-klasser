@@ -43,8 +43,8 @@ public T min(){
 } */
 
 public void print(){
-for(int i = 0; i <= last; i++){
     Console.WriteLine("detta är din kö:");
+for(int i = 0; i <= last; i++){
     Console.Write($"[ {items[i]} ]");
 }
 }
