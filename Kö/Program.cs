@@ -82,6 +82,7 @@ bool active = true;
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
+while(active){
 
 Console.WriteLine("(1) add");
 Console.WriteLine("(2) remove");
@@ -91,7 +92,7 @@ Console.WriteLine("(5) swap");
 Console.WriteLine("(6) Exit");
 
 Alt = int.Parse(Console.ReadLine());
-while(active){
+
 switch(Alt){
 
 case 1:
@@ -110,7 +111,7 @@ minKo1.Add(addNumber);
 break;
 
 case 2: 
-
+Console.WriteLine("tom case");
 break;
 
 case 3:
@@ -128,7 +129,7 @@ minKo1.print(2);
 break;
 
 case 5:
-
+Console.WriteLine("tom case");
 break;
 
 case 6:
