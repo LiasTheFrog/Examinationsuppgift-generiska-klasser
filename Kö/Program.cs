@@ -107,15 +107,20 @@ Console.WriteLine("ange nummret du vill lägga till: ");
 addNumber = int.Parse(Console.ReadLine());
 minKo1.Add(addNumber);
 }
-
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 2: 
 Console.WriteLine("tom case");
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 3:
 Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2)); 
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 4:
@@ -126,10 +131,14 @@ minKo1.print(1);
 }else{
 minKo1.print(2);
 }
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 5:
 Console.WriteLine("tom case");
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 6:
