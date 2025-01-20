@@ -43,7 +43,8 @@ public T min(){
 } */
 
 public void print(){
-for(int i = 0; i <= last;i++){
+for(int i = 0; i <= last; i++){
+    Console.WriteLine("detta är din kö:");
     Console.Write($"[ {items[i]} ]");
 }
 }
@@ -78,6 +79,8 @@ minKo2.Add(2);
 minKo2.Add(3);
 
    Console.WriteLine(minKo1.Compare(minKo2)); 
+   minKo1.print();
+   minKo2.print();
 
     }
 }
