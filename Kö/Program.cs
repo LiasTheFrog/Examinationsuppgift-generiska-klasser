@@ -1,5 +1,6 @@
 ﻿
 using System.ComponentModel;
+using System.ComponentModel.Design;
 
 public class Ko <T> where T : IComparable<T>{
     //variabler
@@ -77,7 +78,7 @@ class Program{
 int Alt;
 int chooseKo;
 int addNumber;
-
+bool active = true;
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
@@ -87,10 +88,10 @@ Console.WriteLine("(2) remove");
 Console.WriteLine("(3) compare");
 Console.WriteLine("(4) print");
 Console.WriteLine("(5) swap");
-Console.WriteLine("(6) ");
+Console.WriteLine("(6) Exit");
 
 Alt = int.Parse(Console.ReadLine());
-
+while(active){
 switch(Alt){
 
 case 1:
@@ -131,13 +132,9 @@ case 5:
 break;
 
 case 6:
-
+active = false;
 break;
-
-case 7:
-
-break;
-
+}
 
 }
     }
