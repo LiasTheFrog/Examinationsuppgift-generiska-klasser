@@ -70,7 +70,14 @@ public class LengthException : Exception{
 
 
 class Program{
+
+
     public static void Main(){
+//variables
+int Alt;
+int chooseKo;
+int addNumber;
+
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
@@ -82,11 +89,22 @@ Console.WriteLine("(4) print");
 Console.WriteLine("(5)");
 Console.WriteLine("(6)");
 
-int Alt = int.Parse(Console.ReadLine());
+Alt = int.Parse(Console.ReadLine());
 
 switch(Alt){
 
 case 1:
+Console.WriteLine("väljk kö: ");
+chooseKo = int.Parse(Console.ReadLine());
+if(chooseKo == 1){
+    Console.WriteLine("ange nummret du vill lägga till: ");
+addNumber = int.Parse(Console.ReadLine());
+minKo1.Add(addNumber);
+}else{
+Console.WriteLine("ange nummret du vill lägga till: ");
+addNumber = int.Parse(Console.ReadLine());
+minKo1.Add(addNumber);
+}
 
 break;
 
@@ -95,11 +113,17 @@ case 2:
 break;
 
 case 3:
-
+Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2)); 
 break;
 
 case 4:
-
+Console.WriteLine("välj vilken kö: ");
+chooseKo = int.Parse(Console.ReadLine());
+if(chooseKo == 1){
+minKo1.print(1);
+}else{
+minKo1.print(2);
+}
 break;
 
 case 5:
@@ -116,17 +140,5 @@ break;
 
 
 }
-
-minKo1.Add(1);
-minKo1.Add(2);
-minKo1.Add(3);
-minKo2.Add(1);
-minKo2.Add(2);
-minKo2.Add(3);
-
-   Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2)); 
-   minKo1.print(1);
-   minKo2.print(2);
-
     }
 }
