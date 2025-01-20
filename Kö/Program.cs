@@ -42,11 +42,12 @@ public T min(){
 
 } */
 
-public void print(){
-    Console.WriteLine("detta är din kö:");
+public void print(int koNumber){
+    Console.WriteLine($"detta är din kö {koNumber}:");
 for(int i = 0; i <= last; i++){
     Console.Write($"[ {items[i]} ]");
 }
+Console.WriteLine(" ");
 }
 
 //Konstuktor 
@@ -79,8 +80,8 @@ minKo2.Add(2);
 minKo2.Add(3);
 
    Console.WriteLine(minKo1.Compare(minKo2)); 
-   minKo1.print();
-   minKo2.print();
+   minKo1.print(1);
+   minKo2.print(2);
 
     }
 }
