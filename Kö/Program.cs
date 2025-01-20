@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel;
+
 public class Ko <T> where T : IComparable<T>{
     //variabler
     int last;
@@ -72,6 +74,49 @@ class Program{
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
+
+Console.WriteLine("(1) add");
+Console.WriteLine("(2) remove");
+Console.WriteLine("(3) compare");
+Console.WriteLine("(4) print");
+Console.WriteLine("(5)");
+Console.WriteLine("(6)");
+
+int Alt = int.Parse(Console.ReadLine());
+
+switch(Alt){
+
+case 1:
+
+break;
+
+case 2: 
+
+break;
+
+case 3:
+
+break;
+
+case 4:
+
+break;
+
+case 5:
+
+break;
+
+case 6:
+
+break;
+
+case 7:
+
+break;
+
+
+}
+
 minKo1.Add(1);
 minKo1.Add(2);
 minKo1.Add(3);
@@ -79,7 +124,7 @@ minKo2.Add(1);
 minKo2.Add(2);
 minKo2.Add(3);
 
-   Console.WriteLine(minKo1.Compare(minKo2)); 
+   Console.WriteLine("0 = lika, !0 = olika:", minKo1.Compare(minKo2)); 
    minKo1.print(1);
    minKo2.print(2);
 
