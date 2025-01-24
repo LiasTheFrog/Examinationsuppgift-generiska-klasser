@@ -31,7 +31,7 @@ else throw new LengthException();
 }
 
 public void Remove(int removeIndex){
-    for(int i = removeIndex; removeIndex <= last; i++){
+    for(int i = removeIndex; i <= last; i++){
         items[removeIndex] = items[removeIndex +1];
     }
 
@@ -122,15 +122,14 @@ case 2:
 Console.WriteLine("välj kö: ");
 chooseKo = int.Parse(Console.ReadLine());
 if(chooseKo == 1){
-    Console.WriteLine("välj index att ta bort");
+    Console.WriteLine("välj index att ta bort: ");
     chooseIndex = int.Parse(Console.ReadLine());
 minKo1.Remove(chooseIndex);
 }else{
-    Console.WriteLine("välj index att ta bort");
+    Console.WriteLine("välj index att ta bort: ");
     chooseIndex = int.Parse(Console.ReadLine());
 minKo2.Remove(chooseIndex);
 }
-
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
 break;
