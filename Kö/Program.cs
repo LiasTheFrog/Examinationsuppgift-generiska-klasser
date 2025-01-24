@@ -31,7 +31,11 @@ else throw new LengthException();
 }
 
 public void Remove(int removeIndex){
+    for(int i = removeIndex; removeIndex <= last; i++){
+        items[removeIndex] = items[removeIndex +1];
+    }
 
+last--;
 }
 
 public void Swap(){
