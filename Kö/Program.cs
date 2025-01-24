@@ -147,7 +147,7 @@ chooseKo = int.Parse(Console.ReadLine());
 if(chooseKo == 1){
 minKo1.print(1);
 }else{
-minKo1.print(2);
+minKo2.print(2);
 }
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
