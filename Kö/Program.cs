@@ -30,7 +30,7 @@ last++;
 else throw new LengthException();
 }
 
-public void Remove(){
+public void Remove(int removeIndex){
 
 }
 
@@ -79,6 +79,7 @@ class Program{
 int Alt;
 int chooseKo;
 int addNumber;
+int chooseIndex;
 bool active = true;
 
 Ko<int> minKo1 = new Ko<int>(5);
@@ -114,7 +115,18 @@ Console.ReadKey();
 break;
 
 case 2: 
-Console.WriteLine("tom case");
+Console.WriteLine("välj kö: ");
+chooseKo = int.Parse(Console.ReadLine());
+if(chooseKo == 1){
+    Console.WriteLine("välj index att ta bort");
+    chooseIndex = int.Parse(Console.ReadLine());
+minKo1.Remove(chooseIndex);
+}else{
+    Console.WriteLine("välj index att ta bort");
+    chooseIndex = int.Parse(Console.ReadLine());
+minKo2.Remove(chooseIndex);
+}
+
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
 break;
