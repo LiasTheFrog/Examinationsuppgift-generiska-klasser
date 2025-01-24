@@ -112,7 +112,7 @@ minKo1.Add(addNumber);
 }else{
 Console.WriteLine("ange nummret du vill lägga till: ");
 addNumber = int.Parse(Console.ReadLine());
-minKo1.Add(addNumber);
+minKo2.Add(addNumber);
 }
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
