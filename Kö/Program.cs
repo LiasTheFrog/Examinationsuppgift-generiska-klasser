@@ -42,13 +42,25 @@ public void Swap(){
 
 }
 
-/* public bool isEmpty(){
-
+public bool isEmpty(){
+    Console.WriteLine("är kön tom?: ");
+return last <0;
 }
 
-public T min(){
+public T Min(){
+T min;
 
-} */
+
+min = items[0];
+
+for(int i = 0; i < last; i++){
+    if(min.CompareTo(items[i++]) > 0){
+min = items[i];
+    } 
+
+}
+return min;
+}
 
 public void print(int koNumber){
     Console.WriteLine($"detta är din kö {koNumber}:");
@@ -96,7 +108,9 @@ Console.WriteLine("(2) remove");
 Console.WriteLine("(3) compare");
 Console.WriteLine("(4) print");
 Console.WriteLine("(5) swap");
-Console.WriteLine("(6) Exit");
+Console.WriteLine("(6) isEmpty");
+Console.WriteLine("(7) Minsta");
+Console.WriteLine("(8) Exit");
 
 Alt = int.Parse(Console.ReadLine());
 
@@ -160,6 +174,23 @@ Console.ReadKey();
 break;
 
 case 6:
+Console.WriteLine("välj kö: ");
+chooseKo = int.Parse(Console.ReadLine());
+
+if(chooseKo == 1){
+    
+minKo1.isEmpty();
+}else{
+    
+minKo2.isEmpty();
+}
+break;
+
+case 7:
+
+break;
+
+case 8:
 active = false;
 break;
 }
