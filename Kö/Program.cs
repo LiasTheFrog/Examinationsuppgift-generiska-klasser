@@ -38,7 +38,7 @@ public void Remove(int removeIndex){
 last--;
 }
 
-public void Swap(){
+public void Swap(int indexnumber1, int indexnumber2){
 
 }
 
@@ -97,6 +97,8 @@ int chooseKo;
 int addNumber;
 int chooseIndex;
 bool active = true;
+int index1;
+int index2;
 
 Ko<int> minKo1 = new Ko<int>(5);
 Ko<int> minKo2 = new Ko<int>(6);
@@ -168,7 +170,24 @@ Console.ReadKey();
 break;
 
 case 5:
-Console.WriteLine("tom case");
+Console.WriteLine("välj kö: ");
+chooseKo = int.Parse(Console.ReadLine());
+
+if(chooseKo == 1){
+    Console.WriteLine("välj första indexet som ska byta plats: ");
+    index1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("välj andra indexet som ska byta plats: ");
+    index2 = int.Parse(Console.ReadLine());
+minKo1.Swap(index1,index2);
+}else{
+     Console.WriteLine("välj första indexet som ska byta plats: ");
+    index1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("välj andra indexet som ska byta plats: ");
+    index2 = int.Parse(Console.ReadLine());
+minKo2.Swap(index1,index2);
+}
+
+
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
 break;
@@ -187,7 +206,18 @@ minKo2.isEmpty();
 break;
 
 case 7:
+Console.WriteLine("välj kö: ");
+chooseKo = int.Parse(Console.ReadLine());
 
+if(chooseKo == 1){
+    
+minKo1.Min();
+}else{
+    
+minKo2.Min();
+}
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 8:
