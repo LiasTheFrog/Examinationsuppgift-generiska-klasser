@@ -8,6 +8,7 @@ public class Ko <T> where T : IComparable<T>{
     int last;
     int len;
     T[] items;
+    T temp;
 
 //metoder
 public int Compare(Ko<T> OneArray){
@@ -40,11 +41,15 @@ last--;
 
 public void Swap(int indexnumber1, int indexnumber2){
 
+temp = items[indexnumber1];
+items[indexnumber1] = items[indexnumber2];
+items[indexnumber2] = temp;
 }
 
 public bool isEmpty(){
     Console.WriteLine("är kön tom?: ");
-return last <0;
+   Console.WriteLine(last < 0);
+return last < 0;
 }
 
 public T Min(){
@@ -54,11 +59,16 @@ T min;
 min = items[0];
 
 for(int i = 0; i < last; i++){
+    
     if(min.CompareTo(items[i++]) > 0){
+        /* Console.WriteLine($"compareTo resultat {min.CompareTo(items[i++])}"); */
 min = items[i];
+Console.WriteLine($"jaja {min}");
     } 
-
+Console.WriteLine($"compareTo resultat {min.CompareTo(items[i++])}");
 }
+
+Console.WriteLine($"nejnej {min}");
 return min;
 }
 
@@ -203,6 +213,8 @@ minKo1.isEmpty();
     
 minKo2.isEmpty();
 }
+Console.WriteLine("press enter to continue");
+Console.ReadKey();
 break;
 
 case 7:
