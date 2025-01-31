@@ -58,14 +58,14 @@ T min;
 
 min = items[0];
 
-for(int i = 0; i < last; i++){
+for(int i = 1; i < last; i++){
     
-    if(min.CompareTo(items[i++]) > 0){
-        /* Console.WriteLine($"compareTo resultat {min.CompareTo(items[i++])}"); */
+    if(min.CompareTo(items[i]) > 0){
+       
 min = items[i];
 Console.WriteLine($"jaja {min}");
     } 
-Console.WriteLine($"compareTo resultat {min.CompareTo(items[i++])}");
+
 }
 
 Console.WriteLine($"nejnej {min}");
