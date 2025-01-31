@@ -104,14 +104,15 @@ class Program{
 //variables
 int Alt;
 int chooseKo;
-int addNumber;
+
+
 int chooseIndex;
 bool active = true;
 int index1;
 int index2;
 
-Ko<int> minKo1 = new Ko<int>(5);
-Ko<int> minKo2 = new Ko<int>(6);
+Ko<string> minKo1 = new Ko<string>(5);
+Ko<string> minKo2 = new Ko<string>(6);
 while(active){
 Console.Clear();
 
@@ -133,12 +134,12 @@ Console.WriteLine("välj kö: ");
 chooseKo = int.Parse(Console.ReadLine());
 if(chooseKo == 1){
     Console.WriteLine("ange nummret du vill lägga till: ");
-addNumber = int.Parse(Console.ReadLine());
-minKo1.Add(addNumber);
+var addItem = Console.ReadLine();
+minKo1.Add(addItem);
 }else{
 Console.WriteLine("ange nummret du vill lägga till: ");
-addNumber = int.Parse(Console.ReadLine());
-minKo2.Add(addNumber);
+var addItem = Console.ReadLine();
+minKo2.Add(addItem);
 }
 Console.WriteLine("press enter to continue");
 Console.ReadKey();
