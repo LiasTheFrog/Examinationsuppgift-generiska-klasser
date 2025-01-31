@@ -58,17 +58,17 @@ T min;
 
 min = items[0];
 
-for(int i = 1; i < last; i++){
+for(int i = 1; i <= last; i++){
     
     if(min.CompareTo(items[i]) > 0){
        
 min = items[i];
-Console.WriteLine($"jaja {min}");
+
     } 
 
 }
 
-Console.WriteLine($"nejnej {min}");
+Console.WriteLine($" minsta = {min}");
 return min;
 }
 
@@ -84,7 +84,7 @@ Console.WriteLine(" ");
 public Ko(int size){
 last = -1;
 len = size;
-items = new T[size];
+items = new T[len];
 }
 }
 
